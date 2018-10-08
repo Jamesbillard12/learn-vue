@@ -15,16 +15,18 @@
             <p>Current Value: {{ value }}</p>
             <button @click="value += 5">Add 5</button>
             <button @click="value += 1">Add 1</button>
-            <p>{{ value < 37 ? 'not there yet' :'done' }}</p> </div> <!-- 2) Watch for changes in the "result" and
-                    reset the "value" after 5 seconds (hint: setTimeout(..., 5000) -->
-                    <div>
-                        <input type="text">
-                        <p>{{ value }}</p>
-                    </div>
+            <p>{{ result }}</p>
         </div>
+        <!-- 2) Watch for changes in the "result" and
+                    reset the "value" after 5 seconds (hint: setTimeout(..., 5000) -->
+        <div>
+            <input type="text">
+            <p>{{ value }}</p>
+        </div>
+    </div>
 
-        <script src="https://unpkg.com/vue/dist/vue.js"></script>
-        <script src='./app.js'></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src='./app.js'></script>
 </body>
 
 </html>
