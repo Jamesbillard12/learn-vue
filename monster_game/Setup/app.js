@@ -38,10 +38,10 @@ new Vue({
 			if (this.userHealth <= 35) {
 				this.bgColorUser = 'red'
 			}
-			if (this.userHealth <= 0 && this.gameEnded == true) {
+			if (this.userHealth <= 0 && this.gameEnded == false) {
 				this.userHealth = 0
 				this.bgColorUser = 'black'
-				this.gameEnded = false
+				this.gameEnded = true
 				let that = this
 				setTimeout(() => {
 					if (
@@ -64,10 +64,11 @@ new Vue({
 			if (this.monsterHealth <= 35) {
 				this.bgColorMonster = 'red'
 			}
-			if (this.monsterHealth <= 0 && this.gameEnded == true) {
+			if (this.monsterHealth <= 0 && this.gameEnded == false) {
+				console.log('WE ARE IN')
 				this.monsterHealth = 0
 				this.bgColorMonster = 'black'
-				this.gameEnded = false
+				this.gameEnded = true
 				let that = this
 				setTimeout(() => {
 					if (
@@ -85,10 +86,12 @@ new Vue({
 		newGame: function() {
 			this.userHealth = 100
 			this.monsterHealth = 100
+			this.gameEnded = false
 			this.gameStarted = true
 			this.rounds = []
 		},
 		giveUp: function() {
+			this.gameEnded = true
 			this.gameStarted = false
 			this.rounds = []
 		},
