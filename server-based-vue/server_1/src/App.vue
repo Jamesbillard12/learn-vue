@@ -1,18 +1,19 @@
 <template>
-  <h1>hello world!</h1>
+<div>
+    <h1>hello world!</h1>
+   <app-servers></app-servers>
+</div>
 </template>
 
 <script>
 export default {
- 
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
-}
+    data() {
+        return {
+            msg: 'THIS IS THE CHEESE',
+        };
+    },
+};
 </script>
 
 <style lang="scss">
-
 </style>
